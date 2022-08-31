@@ -1,38 +1,133 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.innerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px; 
+  flex-direction: column;
+  border-radius: 10px;
+  margin: 15px 0;
+  box-shadow: 0 0 0px 3px #f4f0f0;
+ 
+}
+
+.heading {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navBar {
+  border-bottom: 2px solid #b6b4b4;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navBar ul {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+
+}
+
+.navBar ul li {
+  list-style: none;
+  margin: 5px 22px;
+}
+
+.addTask {
+  margin: 6px 0;
+}
+
+.addTask input {
+  border: 1px solid gray;
+  outline: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  padding: 4px;
+  margin-right: 10px;
+}
+
+.addButton {
+  border: none;
+  background: blue;
   color: white;
+  padding: 7px 15px;
+  font-size: 1rem;
+  border-radius: 7px;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.taskList {
+  width: 100%;
+  position: relative;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.taskList .checkbox ,.results .checkbox {
+  width: 19px;
+  height: 19px;
+  vertical-align: middle;
+  margin-right: 6px;
+  cursor: pointer;
+  accent-color: blue;
+}
+
+input[type=checkbox]:checked+label {
+  text-decoration: line-through;
+}
+
+
+.deleteBtn {
+  position: absolute;
+  right: 5px;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  font-size: 1rem;
+}
+
+.deleteAll {
+  width: 100%;
+  text-align: end;
+  margin: 7px 0;
+
+}
+
+.deleteAll i {
+  margin-right: 5px;
+}
+
+.deleteAllBtn {
+  cursor: pointer;
+  border: none;
+  background: red;
+  padding: 6px;
+  border-radius: 5px;
+  color: white;
+
+}
+
+.activeBtn {
+  border: none;
+  background: #ffeb3b;
+  padding: 5px;
+  border-radius: 5px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.completeBtn {
+  border: none;
+  background: #07ff07;
+  padding: 5px;
+  border-radius: 5px;
+  margin: 5px;
+  cursor: pointer;
 }
